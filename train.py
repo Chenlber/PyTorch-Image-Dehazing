@@ -11,6 +11,7 @@ import dataloader
 import net
 import numpy as np
 from torchvision import transforms
+from datetime import datetime
 
 
 def weights_init(m):
@@ -94,7 +95,7 @@ if __name__ == "__main__":
 	parser.add_argument('--num_epochs', type=int, default=10)
 	parser.add_argument('--train_batch_size', type=int, default=8)
 	parser.add_argument('--val_batch_size', type=int, default=8)
-	parser.add_argument('--num_workers', type=int, default=4)
+	parser.add_argument('--num_workers', type=int, default=0)
 	parser.add_argument('--display_iter', type=int, default=10)
 	parser.add_argument('--snapshot_iter', type=int, default=200)
 	parser.add_argument('--snapshots_folder', type=str, default="snapshots/")
@@ -109,8 +110,7 @@ if __name__ == "__main__":
 
 	train(config)
 
-
-
+	print(datetime.now())
 
 
 

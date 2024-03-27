@@ -12,6 +12,10 @@ import cv2
 
 random.seed(1143)
 
+def log(varname,var):
+    print(varname+":"+str(var))
+
+
 
 def populate_train_list(orig_images_path, hazy_images_path):
 
@@ -61,6 +65,8 @@ def populate_train_list(orig_images_path, hazy_images_path):
 
 	random.shuffle(train_list)
 	random.shuffle(val_list)
+	log("train_list[0]",train_list[0])
+	log("val_list[0]",val_list[0])
 
 	return train_list, val_list
 
